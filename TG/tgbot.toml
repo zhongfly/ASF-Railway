@@ -1,0 +1,8 @@
+[telegram]
+token = "xxxxxxxxxxxxxxxxx"
+admin = [123456789]
+proxy =  ""
+
+[ipc]
+address = "http://127.0.0.1:1242/"
+password = "xxxxxxxxxxxxx"
