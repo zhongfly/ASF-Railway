@@ -5,6 +5,9 @@ WORKDIR /
 #     cd telegram-bot-asf && \
 #     pip3 install -r requirements.txt
 # COPY TG/tgbot.toml /telegram-bot-asf/
+RUN apt-get update && apt-get install -y tzdata && \
+    echo "Asia/Shanghai" > /etc/timezone && \ 
+    cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 COPY ASF/ /app/
 COPY entry.sh .
 RUN chmod +x entry.sh
