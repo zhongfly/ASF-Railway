@@ -1,4 +1,4 @@
-FROM justarchi/archisteamfarm:released
+FROM justarchi/archisteamfarm:latest
 WORKDIR /
 # RUN apt-get update && apt-get install -y git python3 python3-pip && \
 #     git clone https://github.com/zhongfly/telegram-bot-asf.git  --depth=1 && \
