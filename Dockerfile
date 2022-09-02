@@ -1,3 +1,4 @@
+ARG PORT=1242
 FROM justarchi/archisteamfarm:latest
 WORKDIR /
 # RUN apt-get update && apt-get install -y git python3 python3-pip && \
@@ -11,6 +12,6 @@ RUN apt-get update && apt-get install -y tzdata && \
 COPY ASF/ /app/
 COPY entry.sh .
 RUN chmod +x entry.sh
-EXPOSE 1242
+EXPOSE ${PORT}
 ENTRYPOINT [ "/bin/bash", "-l", "-c" ]
 CMD [ "./entry.sh" ]
